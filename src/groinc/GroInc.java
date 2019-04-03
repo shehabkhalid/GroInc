@@ -10,7 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import frontEnd.*;
 /**
  *
  * @author shehab
@@ -21,7 +21,8 @@ public class GroInc extends Application
     @Override
     public void start(Stage stage) throws Exception
       {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+      
+        Parent root = FXMLLoader.load(getClass().getResource("/frontEnd/registrationForm.fxml"));
         
         Scene scene = new Scene(root);
         

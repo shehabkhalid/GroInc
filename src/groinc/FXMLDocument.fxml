@@ -8,10 +8,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="1181.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="groinc.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groinc.FXMLDocumentController">
     <children>
-      <Button fx:id="IsWork" layoutX="258.0" layoutY="144.0" mnemonicParsing="false" onAction="#testit" prefHeight="39.0" prefWidth="666.0" text="Test" />
-      <Label fx:id="label2" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="255.0" layoutY="238.0" prefHeight="145.0" prefWidth="672.0" textAlignment="RIGHT" textFill="#bd00f5f2" textOverrun="CLIP">
+      <Button fx:id="IsWork" layoutX="297.0" layoutY="44.0" mnemonicParsing="false" onAction="#testit" prefHeight="39.0" prefWidth="213.0" text="Test" />
+      <Label fx:id="label2" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="174.0" layoutY="130.0" prefHeight="54.0" prefWidth="458.0" textAlignment="RIGHT" textFill="#bd00f5f2" textOverrun="CLIP">
          <font>
             <Font name="Blackadder ITC" size="68.0" />
          </font>

@@ -33,6 +33,11 @@ public class phoneNumber
 
     public static boolean isValid(String phone)
       {
+       
+        for(char i : phone.toCharArray())
+            if(Character.isAlphabetic(i))
+                return false;
+            
         return (phone.length() == 11 && (phone.charAt(0) == '0' && phone.charAt(1) == '1'
                 && (phone.charAt(2) == '1' || phone.charAt(2) == '2' || phone.charAt(2) == '0'
                 || phone.charAt(2) == '5')))

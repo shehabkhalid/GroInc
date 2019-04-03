@@ -5,11 +5,10 @@
  */
 package groinc;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+
 import javafx.scene.control.Label;
 import javafx.*;
 import javafx.animation.ScaleTransition;
@@ -21,7 +20,7 @@ import javafx.util.Duration;
  *
  * @author shehab
  */
-public class FXMLDocumentController implements Initializable
+public class FXMLDocumentController 
   {
     
     
@@ -44,10 +43,9 @@ public class FXMLDocumentController implements Initializable
        
       }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb)
-      {
-        // TODO
-      }    
+  
     
   }
+
+
+
