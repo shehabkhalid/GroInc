@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.registrationFormController">
+<AnchorPane id="AnchorPane" fx:id="registrationPane" prefHeight="528.0" prefWidth="368.0" style="-fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.registrationFormController">
    <children>
-      <AnchorPane prefHeight="702.0" prefWidth="435.0" style="-fx-background-color: #BBF9F9; -fx-border-color: #ffffff; -fx-border-width: 5;">
+      <AnchorPane layoutX="17.0" layoutY="25.0" prefHeight="528.0" prefWidth="368.0" style="-fx-border-color: #60037f; -fx-border-width: 4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXTextField fx:id="firstNameField" layoutX="90.0" layoutY="78.0" prefColumnCount="20" promptText="First name" unFocusColor="WHITE" />
-            <DatePicker fx:id="dateField" layoutX="112.0" layoutY="432.0" prefHeight="31.0" prefWidth="265.0" />
-            <Label layoutX="13.0" layoutY="437.0" text="Date of Birth" />
-            <JFXTextField fx:id="lastNameField" layoutX="90.0" layoutY="142.0" prefColumnCount="20" promptText="Last name" unFocusColor="WHITE" />
-            <JFXTextField fx:id="phoneField" layoutX="90.0" layoutY="203.0" prefColumnCount="20" promptText="Phone number" unFocusColor="WHITE" />
-            <JFXTextField fx:id="emailField" layoutX="90.0" layoutY="270.0" prefColumnCount="20" promptText="E-mail" unFocusColor="WHITE" />
-            <JFXPasswordField fx:id="passwordField" layoutX="90.0" layoutY="346.0" prefColumnCount="20" promptText="Password" unFocusColor="WHITE" />
-            <JFXRadioButton fx:id="maleRadioBtn" layoutX="102.0" layoutY="509.0" text="Male" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI Historic" size="24.0" />
-               </font>
-            </JFXRadioButton>
-            <JFXRadioButton fx:id="femaleRadioBtn" layoutX="241.0" layoutY="509.0" text="Female" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI Historic" size="24.0" />
-               </font>
-            </JFXRadioButton>
-            <JFXButton fx:id="register" buttonType="RAISED" layoutX="195.0" layoutY="579.0" minWidth="-Infinity" onAction="#register" ripplerFill="#62c6c9" text="Login" textFill="WHITE" />
-         </children>
-      </AnchorPane>
+            <Text fx:id="registrationFailed" fill="#f20000" layoutX="120.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration failed !" visible="false" />
+         </children></AnchorPane>
+      <JFXTextField fx:id="firstName" focusColor="#0d297c" layoutX="84.0" layoutY="68.0" onMouseClicked="#firstNameError" prefColumnCount="15" promptText="First Name" unFocusColor="#636161" />
+      <JFXTextField fx:id="lastName" focusColor="#0d297c" layoutX="84.0" layoutY="111.0" onMouseClicked="#lastNameError" prefColumnCount="15" promptText="Last Name" unFocusColor="#636161" />
+      <JFXTextField fx:id="userName" focusColor="#0d297c" layoutX="84.0" layoutY="154.0" onMouseClicked="#userNameError" prefColumnCount="15" promptText="Username" unFocusColor="#636161" />
+      <JFXPasswordField fx:id="password" focusColor="#0d297c" layoutX="84.0" layoutY="197.0" onMouseClicked="#passwordError" prefColumnCount="15" promptText="Password" unFocusColor="#636161" />
+      <JFXTextField fx:id="email" focusColor="#0d297c" layoutX="84.0" layoutY="240.0" onMouseClicked="#emailError" prefColumnCount="15" promptText="E-mail" unFocusColor="#636161" />
+      <JFXTextField fx:id="phoneNumberp" focusColor="#0d297c" layoutX="83.0" layoutY="282.0" onMouseClicked="#phoneNumberError" prefColumnCount="15" promptText="Phone Number" unFocusColor="#636161" />
+      <JFXComboBox fx:id="gender_combobox" focusColor="#0d297c" layoutX="143.0" layoutY="325.0" onMouseClicked="#genderError" prefWidth="90.0" promptText="Gender" unFocusColor="#636161" />
+      <JFXDatePicker fx:id="datePick" defaultColor="#636161" layoutX="90.0" layoutY="367.0" promptText="Date of birth" style="-fx-prompt-text-fill: #0137b5; -fx-unfocus-color: #0137b5;" />
+      <JFXButton layoutX="122.0" layoutY="450.0" onAction="#registerBtn" prefWidth="120.0" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Register" textFill="#636161" />
+      <BorderPane fx:id="parentb" prefHeight="47.0" prefWidth="368.0" style="-fx-background-color: #60037f;">
+         <right>
+            <ImageView fx:id="closeIcon" blendMode="LIGHTEN" fitHeight="39.0" fitWidth="49.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true" style="visibility: true;" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../Textures/close4.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </right>
+      </BorderPane>
    </children>
-</VBox>
+</AnchorPane>

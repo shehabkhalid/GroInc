@@ -16,11 +16,17 @@ public class name
 
     private String naString = new String(""), laString = new String("");
 
+    
+  
     public name(String naString, String laString)
       {
         this.naString = naString;
         this.laString = laString;
         format();
+      }
+
+    public name()
+      {
       }
 
     public String getLaString()
@@ -35,14 +41,14 @@ public class name
 
     public void setLaString(String laString)
       {
-        this.laString = laString;
-        format();
+        this.laString = new String(laString);
+       // format();
       }
 
     public void setNaString(String naString)
       {
-        this.naString = naString;
-        format();
+        this.naString = new String(naString);
+       // format();
       }
 
     public static boolean isNameValid(String naString, String LaNString)

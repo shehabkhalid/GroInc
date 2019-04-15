@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package Backend_skeleton;
-import attributes.name;
-import attributes.email;
-import attributes.date;
+import attributes.*;
 
 
 
@@ -14,34 +12,58 @@ import attributes.date;
  *
  * @author shehab
  */
-abstract class person
+public abstract class person
   {
 
-    protected static int idGenrator = 1;
+  
 
-    protected final int id = idGenrator;
+    
     protected name fullName;
     protected email mail;
-    protected boolean gender;
-    protected  date birthDate;
+    protected String gender;
+    protected  String birthDate;
+    protected String password,userName;
+    protected phoneNumber phoneNumber1;
 
-    public person(name fullName, email mail, boolean gender, date birthDate)
+    public String getBirthDate()
       {
-        this.fullName = fullName;
-        this.mail = mail;
-        this.gender = gender;
-        this.birthDate = birthDate;
-        idGenrator++;
+        return birthDate;
+      }
 
+    
+    public name getFullName()
+      {
+        return fullName;
+      }
+
+    public String getGender()
+      {
+        return gender;
+      }
+
+    public email getMail()
+      {
+        return mail;
+      }
+
+    public String getPassword()
+      {
+        return password;
+      }
+
+    public String getUserName()
+      {
+        return userName;
+      }
+
+    public phoneNumber getPhoneNumber1()
+      {
+        return phoneNumber1;
       }
     
     
-   
-    
-   
     
 
    
-    
 
   }

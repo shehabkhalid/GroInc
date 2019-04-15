@@ -12,8 +12,14 @@ package attributes;
  */
 public class date
   {
+    
     private int day,month,year, hours,min;
 
+    public date()
+      {
+      }
+
+    
     public date(int day, int month, int year)
       {
         this.day = day;

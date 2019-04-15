@@ -5,23 +5,24 @@
  */
 package Backend_skeleton;
 
-import attributes.*;
+import attributes.date;
+import attributes.email;
+import attributes.name;
+import attributes.phoneNumber;
 
 /**
  *
  * @author shehab
  */
-public class member extends person
+public class teamLeader extends person
   {
 
-    public member()
+    public teamLeader()
       {
       }
 
-   
-   
     
-    public member(name fullName,phoneNumber phone, email mail, String gender, String birthDate, String password, String userName)
+    public teamLeader(name fullName,phoneNumber phone, email mail, String gender, String birthDate, String password, String userName)
       {
        this.fullName = fullName;
         this.mail = mail;
@@ -31,5 +32,4 @@ public class member extends person
         this.userName = userName;
         phoneNumber1 = phone;
       }
-
   }

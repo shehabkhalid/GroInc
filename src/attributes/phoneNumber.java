@@ -16,6 +16,10 @@ public class phoneNumber
 
     private String pString = new String("");
 
+    public phoneNumber()
+      {
+      }
+
     public phoneNumber(String phoneString)
       {
         pString = phoneString;
@@ -43,4 +47,5 @@ public class phoneNumber
                 || phone.charAt(2) == '5')))
                         ? true : false;
       }
+   
   }
