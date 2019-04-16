@@ -12,39 +12,40 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import frontEnd.*;
 import Backend_skeleton.dataBaseConnector;
+import Backend_skeleton.SceneMaker;
+import com.jfoenix.controls.JFXDecorator;
+import javafx.scene.Node;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
+
 /**
  *
  * @author shehab
  */
-public class GroInc extends Application
+public class GroInc extends Application 
   {
-    
-    @Override
+   
+
+  //  @Override
     public void start(Stage stage) throws Exception
       {
-      
-       // dataBaseConnector.openDataBase();
-        Parent root = FXMLLoader.load(getClass().getResource("/frontEnd/application.fxml"));
+
+//Scene scene = new Scene(decorator, 800, 850);
+        // dataBaseConnector.openDataBase();
+        SceneMaker.setMainStage(stage);
+        SceneMaker.startScene(getClass().getResource("/frontEnd/LoginForm.fxml"));
         
-        Scene scene = new Scene(root);
-         scene.getStylesheets().add("/frontEnd/LoginForm.css");
-        stage.setScene(scene);
-        stage.initStyle(StageStyle.UNDECORATED);
-       
-        stage.show();
+        
       }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
+    public static void main (String[] args) throws Exception
       {
-        
-             
-         
+
         launch(args);
-        
+
       }
-    
+
   }

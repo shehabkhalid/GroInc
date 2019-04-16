@@ -30,13 +30,17 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.control.DatePicker;
-
+import groinc.GroInc;
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
+import javafx.util.Duration;
+import Backend_skeleton.SceneMaker;
 /**
  * FXML Controller class
  *
  * @author Dell
  */
-public class registrationFormController implements Initializable
+public class registrationFormController implements Initializable 
   {
 
     @FXML
@@ -81,6 +85,17 @@ public class registrationFormController implements Initializable
     private void registerBtn(ActionEvent event)
       {
 
+        
+          try
+            { 
+              URL nextForm =  getClass().getResource("LoginForm.fxml");
+          SceneMaker.startScene(nextForm);
+    //   fadeIn();
+              
+            } catch (Exception e)
+            {System.out.println(e);
+            }
+        
         if (name.isNameValid(firstName.getText().toString(), lastName.getText().toString()))
           {
 
@@ -212,12 +227,32 @@ public class registrationFormController implements Initializable
 
       }
 
+   private void fadeIn()
+      {
+       /*  registrationPane.setOpacity(0);
+         FadeTransition animate = new FadeTransition();
+          animate.setDuration(Duration.millis(1000f));
+          animate.setNode(registrationPane);
+          animate.setToValue(1);
+          animate.play();*/
+          registrationPane.setScaleX(0);
+     registrationPane.setScaleY(0);
+     ScaleTransition animate = new ScaleTransition(Duration.millis(700),registrationPane);
+       animate.setToX(1);
+       animate.setToY(1);
+        animate.play();
+        
+          
+      }
+   
     @Override
     public void initialize(URL location, ResourceBundle resources)
       {
 
+        fadeIn();
+      
         gender_combobox.getItems().addAll("Male", "Female");
-        //  gender_combobox.editableProperty(false);
+     
       }
 
   }

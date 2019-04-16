@@ -20,13 +20,18 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import Backend_skeleton.*;
 import javafx.scene.control.PasswordField;
-
+import groinc.GroInc;
+import javafx.animation.FadeTransition;
+import javafx.animation.ScaleTransition;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.util.Duration;
 /**
  * FXML Controller class
  *
  * @author Dell
  */
-public class LoginFormController
+public class LoginFormController implements Initializable
   {
 
     @FXML
@@ -43,10 +48,12 @@ public class LoginFormController
     private Text LoginFormError;
 
     @FXML
-    private void to_register(ActionEvent event) throws IOException
+    private void to_register(ActionEvent event) throws Exception
       {
-        AnchorPane registrationPane = FXMLLoader.load(getClass().getResource("registrationForm.fxml"));
-        loginPane.getChildren().setAll(registrationPane);
+       
+     
+       SceneMaker.startScene(getClass().getResource("registrationForm.fxml"));    
+      
       }
 
     @FXML
@@ -59,11 +66,34 @@ public class LoginFormController
        else
            LoginFormError.setVisible(true);
       }
-
-    @FXML
-    private void closeApp(MouseEvent event)
+    
+    private void fadeIn()
       {
-        System.exit(0);
+        /* loginPane.setOpacity(0);
+         FadeTransition animate = new FadeTransition();
+          animate.setDuration(Duration.millis(1500f));
+          animate.setNode(loginPane);
+          animate.setToValue(1);
+          animate.play();*/
+        
+     loginPane.setScaleX(0);
+     loginPane.setScaleY(0);
+     ScaleTransition animate = new ScaleTransition(Duration.millis(700),loginPane);
+       animate.setToX(1);
+       animate.setToY(1);
+        animate.play();
+        
+          
       }
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources)
+      {
+         
+          fadeIn();
+         
+      }
+
+   
 
   }

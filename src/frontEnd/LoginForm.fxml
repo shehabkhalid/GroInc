@@ -12,35 +12,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="483.0" prefWidth="368.0" style="-fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.LoginFormController">
+<AnchorPane id="AnchorPane" fx:id="loginPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="368.0" style="-fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.LoginFormController">
    <children>
-      <AnchorPane layoutX="17.0" layoutY="25.0" prefHeight="528.0" prefWidth="368.0" style="-fx-border-color: #60037f; -fx-border-width: 4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text fx:id="LoginFormError" fill="RED" layoutX="85.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid username or password" visible="false" />
-         </children></AnchorPane>
-      <JFXTextField fx:id="userName" focusColor="#112233" layoutX="83.0" layoutY="125.0" prefColumnCount="15" promptText="Username" unFocusColor="#636161" />
-      <JFXPasswordField fx:id="password" focusColor="#112233" layoutX="83.0" layoutY="179.0" prefColumnCount="15" promptText="Password" unFocusColor="#636161" />
-      <JFXButton layoutX="120.0" layoutY="341.0" onAction="#LoginButton" ripplerFill="#636161" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Login" textFill="#636161" textOverrun="LEADING_ELLIPSIS" AnchorPane.bottomAnchor="154.0" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="108.0" AnchorPane.topAnchor="341.0">
+      <JFXTextField fx:id="userName" focusColor="#112233" layoutX="76.0" layoutY="64.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Username" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
+      <JFXPasswordField fx:id="password" focusColor="#112233" layoutX="76.0" layoutY="168.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Password" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
+      <JFXButton layoutX="107.0" layoutY="312.0" onAction="#LoginButton" prefHeight="33.0" prefWidth="154.0" ripplerFill="#636161" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Login" textFill="#636161" textOverrun="LEADING_ELLIPSIS" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0">
          <effect>
             <ColorAdjust />
          </effect>
       </JFXButton>
-      <JFXButton layoutX="117.0" layoutY="383.0" onAction="#to_register" ripplerFill="#636161" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Register" textFill="#636161" textOverrun="LEADING_ELLIPSIS" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="108.0">
+      <JFXButton layoutX="108.0" layoutY="387.0" minHeight="33.0" minWidth="152.0" onAction="#to_register" prefHeight="33.0" prefWidth="152.0" ripplerFill="#636161" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Register" textFill="#636161" textOverrun="LEADING_ELLIPSIS" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="108.0">
          <effect>
             <ColorAdjust />
          </effect>
       </JFXButton>
-      <BorderPane fx:id="parentb" prefHeight="47.0" prefWidth="368.0" style="-fx-background-color: #60037f;">
-         <right>
-            <ImageView fx:id="closeIcon" blendMode="LIGHTEN" fitHeight="39.0" fitWidth="49.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true" style="visibility: true;" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../../Textures/close4.png" />
-               </image>
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-            </ImageView>
-         </right>
-      </BorderPane>
+      <Text fx:id="LoginFormError" fill="RED" layoutX="18.0" layoutY="-16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid username or password" textAlignment="CENTER" visible="false" wrappingWidth="327.38037109375" y="285.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="22.61962890625" />
    </children>
 </AnchorPane>
