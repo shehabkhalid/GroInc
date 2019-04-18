@@ -7,7 +7,7 @@ package Backend_skeleton;
 
 import javafx.scene.Scene;
 import com.jfoenix.controls.JFXDecorator;
-import com.sun.org.apache.bcel.internal.generic.AALOAD;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
@@ -52,7 +52,7 @@ public class SceneMaker
           try
             {
                 theNewScene = new Scene(border);
-                System.out.println("das");
+               
                 theNewScene.getStylesheets().add("/frontEnd/decoratorEdit.css");
                 mainStage.setScene(theNewScene);
                 mainStage.show();

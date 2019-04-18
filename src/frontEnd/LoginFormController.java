@@ -61,7 +61,7 @@ public class LoginFormController implements Initializable
       {
         
 
-       if( dataBaseConnector.loginCheck(userName.getText(), password.getText()))
+       if( dataBaseConnector.loginCheck(userName.getText(), Password.Encrypt( new StringBuilder(password.getText()))))
               System.out.println("Welcome");
        else
            LoginFormError.setVisible(true);

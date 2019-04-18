@@ -37,7 +37,7 @@ public class dataBaseConnector
         try
           {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            myConnection = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/groincdatabase", "groincteam", "groincisthebest");
+            myConnection = DriverManager.getConnection("jdbc:mysql://groincdatabase.cofcwbekphsc.us-east-1.rds.amazonaws.com:3306/groincdatabase", "groinc", "groincisthebest");
 
           } catch (Exception e)
           {
@@ -79,6 +79,7 @@ public class dataBaseConnector
 
     public static boolean loginCheck(String userString, String passString)
       {
+      //  openDataBase();
         try
           {
 
@@ -97,7 +98,7 @@ public class dataBaseConnector
               }
 
             //  myConnection.close();
-            
+          //  closeDataBase();
             return (ok.equals("true"))?true:false;
 
           } catch (Exception e)
