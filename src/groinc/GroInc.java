@@ -5,6 +5,7 @@
  */
 package groinc;
 
+import attributes.email;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,32 +18,41 @@ import com.jfoenix.controls.JFXDecorator;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
+import Backend_skeleton.clientManager;
+import Backend_skeleton.clientManager;
+import attributes.name;
 
 /**
  *
  * @author shehab
  */
-public class GroInc extends Application 
+public class GroInc extends Application
   {
-   
 
-  //  @Override
+    //  @Override
     public void start(Stage stage) throws Exception
       {
 
 //Scene scene = new Scene(decorator, 800, 850);
-         dataBaseConnector.openDataBase();
+       dataBaseConnector.openDataBase();
         SceneMaker.setMainStage(stage);
         SceneMaker.startScene(getClass().getResource("/frontEnd/LoginForm.fxml"));
-        
-        
+
       }
 
     /**
      * @param args the command line arguments
      */
-    public static void main (String[] args) throws Exception
+    public static void main(String[] args) throws Exception
       {
+      
+        
+         
+          
+     clientManager.openConnection();
+     
+    
+        
 
         launch(args);
 

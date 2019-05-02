@@ -10,13 +10,17 @@ import java.sql.*;
 import java.sql.CallableStatement;
 import javax.imageio.IIOException;
 import Backend_skeleton.*;
+import com.mysql.cj.Session;
+
+
 /**
  *
  * @author shehab
  */
-public class dataBaseConnector
+public class dataBaseConnector 
   {
 
+   
     private static Connection myConnection;
 
     public  static void closeDataBase()
@@ -37,9 +41,9 @@ public class dataBaseConnector
         try
           {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            myConnection = DriverManager.getConnection("jdbc:mysql://groincdatabase.cofcwbekphsc.us-east-1.rds.amazonaws.com:3306/groincdatabase", "groinc", "groincisthebest");
+            myConnection = DriverManager.getConnection("jdbc:mysql://groinc.cofcwbekphsc.us-east-1.rds.amazonaws.com:3306/groincdatabase", "groinc", "groincisthebest");
 
-          } catch (Exception e)
+          } catch (Exception e) 
           {
             System.out.println(e);
           }
@@ -99,6 +103,7 @@ public class dataBaseConnector
 
             //  myConnection.close();
           //  closeDataBase();
+           
             return (ok.equals("true"))?true:false;
 
           } catch (Exception e)

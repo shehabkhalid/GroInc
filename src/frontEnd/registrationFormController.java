@@ -35,6 +35,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.util.Duration;
 import Backend_skeleton.SceneMaker;
+import java.io.IOException;
 /**
  * FXML Controller class
  *
@@ -70,7 +71,7 @@ public class registrationFormController implements Initializable
     private phoneNumber tempPhone = new phoneNumber();
     private date tempDate = new date();
     private email tempMail = new email();
-    private person tempPerson;
+    private member tempPerson;
 
     @FXML
     private JFXDatePicker datePick;
@@ -82,25 +83,17 @@ public class registrationFormController implements Initializable
       }
 
     @FXML
-    private void registerBtn(ActionEvent event)
+    private void registerBtn(ActionEvent event) throws IOException,ClassNotFoundException
       {
 
         
-          try
-            { 
-              URL nextForm =  getClass().getResource("LoginForm.fxml");
-          SceneMaker.startScene(nextForm);
-    //   fadeIn();
-              
-            } catch (Exception e)
-            {System.out.println(e);
-            }
+      
         
-        if (name.isNameValid(firstName.getText().toString(), lastName.getText().toString()))
+        if (name.isNameValid(firstName.getText(), lastName.getText()))
           {
 
-            tempName.setNaString(firstName.getText().toString());
-            tempName.setLaString(lastName.getText().toString());
+            tempName.setNaString(firstName.getText());
+            tempName.setLaString(lastName.getText());
 
             if (dataBaseConnector.checkUserName(userName.getText()))
               {
@@ -126,7 +119,9 @@ public class registrationFormController implements Initializable
 
                                     tempPerson = new member(tempName, tempPhone,
                                             tempMail, gender_combobox.getValue(), datePick.getValue().toString(), Password.Encrypt(new StringBuilder(password.getText())), userName.getText());
-                                    if (dataBaseConnector.addUserToDataBase(tempPerson))
+                                    tempPerson.setCommand("ADD");
+                                      //System.out.println(tempPerson.getPhoneNumber1().getpString());
+                                    if (clientManager.addUser(tempPerson))
                                       {
                                         System.out.println("YES");
                                       } else

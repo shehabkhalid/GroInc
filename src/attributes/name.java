@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package attributes;
+import java.io.Serializable;
 
 
 
@@ -11,8 +13,9 @@ package attributes;
  *
  * @author shehab
  */
-public class name
+public class name implements Serializable
   {
+     private static final long serialVersionUID = 4L;
 
     private String naString = new String(""), laString = new String("");
 

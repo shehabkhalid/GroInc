@@ -5,15 +5,15 @@
  */
 package attributes;
 
-
+import java.io.Serializable;
 
 /**
  *
  * @author shehab
  */
-public class phoneNumber
+public class phoneNumber implements Serializable
   {
-
+ private static final long serialVersionUID = 2L;
     private String pString = new String("");
 
     public phoneNumber()

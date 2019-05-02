@@ -6,14 +6,15 @@
 package Backend_skeleton;
 
 import attributes.*;
-
+import java.io.Serializable;
 /**
  *
  * @author shehab
  */
-public class member extends person
+public class member extends person implements Serializable
   {
 
+     private static final long serialVersionUID = 5L;
     public member()
       {
       }

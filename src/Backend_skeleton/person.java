@@ -5,17 +5,17 @@
  */
 package Backend_skeleton;
 import attributes.*;
-
+import java.io.Serializable;
 
 
 /**
  *
  * @author shehab
  */
-public abstract class person
+public abstract class person implements Serializable
   {
 
-  
+   private static final long serialVersionUID = 3L;
 
     
     protected name fullName;
@@ -24,6 +24,7 @@ public abstract class person
     protected  String birthDate;
     protected String password,userName;
     protected phoneNumber phoneNumber1;
+    protected String command;
 
     public String getBirthDate()
       {
@@ -60,6 +61,18 @@ public abstract class person
       {
         return phoneNumber1;
       }
+
+    public void setCommand(String command)
+      {
+        this.command = command;
+      }
+
+    public String getCommand()
+      {
+        return command;
+      }
+
+    
     
     
     

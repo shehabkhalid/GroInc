@@ -4,16 +4,17 @@
  * and open the template in the editor.
  */
 package attributes;
-
+import java.io.Serializable;
 
 
 /**
  *
  * @author shehab
  */
-public class email
+public class email implements Serializable
   {
 
+     private static final long serialVersionUID = 6L;
     private String mailString;
 
     public void setMailString(String mailString)
