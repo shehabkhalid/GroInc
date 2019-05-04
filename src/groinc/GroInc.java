@@ -34,7 +34,7 @@ public class GroInc extends Application
       {
 
 //Scene scene = new Scene(decorator, 800, 850);
-       dataBaseConnector.openDataBase();
+   //    dataBaseConnector.openDataBase();
         SceneMaker.setMainStage(stage);
         SceneMaker.startScene(getClass().getResource("/frontEnd/LoginForm.fxml"));
 

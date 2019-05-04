@@ -15,7 +15,7 @@ public class userNameAndPassword implements Serializable
   {
   private static final long serialVersionUID = 1L;
   
-    private String userName, password;
+    private String userName, password,command;
 
     public userNameAndPassword(String userName, String password)
       {
@@ -32,5 +32,16 @@ public class userNameAndPassword implements Serializable
       {
         return userName;
       }
+
+    public void setCommand(String command)
+      {
+        this.command = command;
+      }
+
+    public String getCommand()
+      {
+        return command;
+      }
+    
 
   }

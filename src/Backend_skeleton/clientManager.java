@@ -33,7 +33,7 @@ public class clientManager
         //18.206.40.99
         try
           {
-            clientSocket = new Socket("18.206.40.99", 8165);
+            clientSocket = new Socket("localhost", 8165);
             output = new ObjectOutputStream(clientSocket.getOutputStream());
             input = new ObjectInputStream(clientSocket.getInputStream());
 
@@ -44,22 +44,29 @@ public class clientManager
 
       }
     
+    
+   
+    
     private static boolean opreationConfirmed(Object object) throws IOException,ClassNotFoundException
       {
       
+       
+            output.writeObject(object);
+            output.flush();
+            output.reset();
+            String ans = (String) input.readObject();
         
-        output.writeObject(object);
-        String ans = (String) input.readObject();
-        output.flush();
-
         return (ans.equals("true"));
 
       }
 
     public static boolean logInCheck(String userName, String Password) throws IOException, ClassNotFoundException
       {
+        
+        userNameAndPassword temp = new userNameAndPassword(userName, Password);
+        temp.setCommand("NULL");
 
-         return  opreationConfirmed(new userNameAndPassword(userName, Password));
+         return  opreationConfirmed(temp);
         
       }
 
@@ -68,6 +75,23 @@ public class clientManager
        
           return opreationConfirmed(user);
          
+      }
+    
+    
+    public static boolean  checkUserName(String userName) throws IOException,ClassNotFoundException
+      {
+        
+        userNameAndPassword temp = new userNameAndPassword(userName,"NULL");
+        temp.setCommand("USERNAME");
+        return opreationConfirmed(temp);
+      }
+    
+    public static boolean checkMail(String Mail) throws IOException,ClassNotFoundException  
+      {
+        
+        email tempMail = new email();
+        tempMail.setMailString(Mail);
+        return opreationConfirmed(tempMail);
       }
 
   }

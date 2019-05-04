@@ -36,12 +36,13 @@ import javafx.animation.ScaleTransition;
 import javafx.util.Duration;
 import Backend_skeleton.SceneMaker;
 import java.io.IOException;
+
 /**
  * FXML Controller class
  *
  * @author Dell
  */
-public class registrationFormController implements Initializable 
+public class registrationFormController implements Initializable
   {
 
     @FXML
@@ -83,31 +84,28 @@ public class registrationFormController implements Initializable
       }
 
     @FXML
-    private void registerBtn(ActionEvent event) throws IOException,ClassNotFoundException
+    private void registerBtn(ActionEvent event) throws IOException, ClassNotFoundException
       {
 
-        
-      
-        
         if (name.isNameValid(firstName.getText(), lastName.getText()))
           {
 
             tempName.setNaString(firstName.getText());
             tempName.setLaString(lastName.getText());
 
-            if (dataBaseConnector.checkUserName(userName.getText()))
+            if (clientManager.checkUserName(userName.getText()))
               {
+                System.out.println("hell yeah");
 
                 if (phoneNumber.isValid(phoneNumberp.getText()))
                   {
 
                     tempPhone.setpString(phoneNumberp.getText());
 
-                    if (dataBaseConnector.emailChecker(email.getText()))
+                    if (clientManager.checkMail(email.getText()))
                       {
 
                         tempMail.setMailString(email.getText());
-
                         if (gender_combobox.getValue() != null)
                           {
 
@@ -120,7 +118,7 @@ public class registrationFormController implements Initializable
                                     tempPerson = new member(tempName, tempPhone,
                                             tempMail, gender_combobox.getValue(), datePick.getValue().toString(), Password.Encrypt(new StringBuilder(password.getText())), userName.getText());
                                     tempPerson.setCommand("ADD");
-                                      //System.out.println(tempPerson.getPhoneNumber1().getpString());
+                                    //System.out.println(tempPerson.getPhoneNumber1().getpString());
                                     if (clientManager.addUser(tempPerson))
                                       {
                                         System.out.println("YES");
@@ -222,32 +220,31 @@ public class registrationFormController implements Initializable
 
       }
 
-   private void fadeIn()
+    private void fadeIn()
       {
-       /*  registrationPane.setOpacity(0);
+        /*  registrationPane.setOpacity(0);
          FadeTransition animate = new FadeTransition();
           animate.setDuration(Duration.millis(1000f));
           animate.setNode(registrationPane);
           animate.setToValue(1);
           animate.play();*/
-          registrationPane.setScaleX(0);
-     registrationPane.setScaleY(0);
-     ScaleTransition animate = new ScaleTransition(Duration.millis(700),registrationPane);
-       animate.setToX(1);
-       animate.setToY(1);
+        registrationPane.setScaleX(0);
+        registrationPane.setScaleY(0);
+        ScaleTransition animate = new ScaleTransition(Duration.millis(700), registrationPane);
+        animate.setToX(1);
+        animate.setToY(1);
         animate.play();
-        
-          
+
       }
-   
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
       {
 
         fadeIn();
-      
+
         gender_combobox.getItems().addAll("Male", "Female");
-     
+
       }
 
   }
