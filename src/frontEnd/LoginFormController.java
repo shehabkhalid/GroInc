@@ -57,13 +57,20 @@ public class LoginFormController implements Initializable
       }
 
     @FXML
-    private void LoginButton(ActionEvent event) throws IOException,ClassNotFoundException
+    private void LoginButton(ActionEvent event) throws IOException,ClassNotFoundException, Exception
       {
         
-
-       if( clientManager.logInCheck(userName.getText(), password.getText()))
-              System.out.println("Welcome");
-       
+       if( clientManager.logInCheck(userName.getText(), password.getText())){
+           
+          try {
+          SceneMaker.startScene(getClass().getResource("application.fxml"));
+           System.out.println("Welcome");
+                 
+          } catch (Exception e) {
+              System.out.println(e);
+          }
+          
+       }
        
        else
            LoginFormError.setVisible(true);

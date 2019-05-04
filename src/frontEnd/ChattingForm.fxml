@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.ChattingFormController">
+   <children>
+      <ScrollPane fx:id="scrollPanel" prefHeight="447.0" prefWidth="380.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXListView fx:id="listView" prefHeight="447.0" prefWidth="380.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXTextField fx:id="chat" layoutX="106.0" layoutY="447.0" onAction="#enter" prefHeight="53.0" prefWidth="380.0" style="-fx-border-color: #60037f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="447.0" />
+   </children>
+</AnchorPane>

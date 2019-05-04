@@ -1,0 +1,10 @@
+.label{
+    -fx-background-color: #4286f4;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-font-size:10pt;
+    -fx-background-size: 20px 20px;
+    -fx-align-content: center;
+    -fx-max-width: 370;
+    -fx-wrap-text: true;
+}

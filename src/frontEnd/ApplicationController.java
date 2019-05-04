@@ -5,16 +5,24 @@
  */
 package frontEnd;
 
+import Backend_skeleton.SceneMaker;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -23,26 +31,31 @@ import javafx.scene.layout.GridPane;
  */
 public class ApplicationController implements Initializable
   {
-    Button n[]=new Button[3];
+
     @FXML
-    private JFXButton b1;
-  
-    /**
-     * Initializes the controller class.
-     */
+    private JFXListView<JFXButton> workspaces;
+
+    public ApplicationController() {
+    
+    }
+
+
+    
     @Override
     public void initialize(URL url, ResourceBundle rb)
       {
-   
+          
       
-         
       }    
 
-    private void closeApp(MouseEvent event)
-      {
-        System.exit(0);
-      }
+    @FXML
+    private void create(ActionEvent event) throws IOException {
+        FXMLLoader load = new FXMLLoader(getClass().getResource("/frontEnd/newWorkspace.fxml"));
+        Parent root2=(Parent)load.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root2));
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
+    }
 
-     
-    
   }

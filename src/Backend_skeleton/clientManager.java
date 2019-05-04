@@ -33,7 +33,7 @@ public class clientManager
         //18.206.40.99
         try
           {
-            clientSocket = new Socket("localhost", 8165);
+            clientSocket = new Socket("18.206.40.99", 8165);
             output = new ObjectOutputStream(clientSocket.getOutputStream());
             input = new ObjectInputStream(clientSocket.getInputStream());
 

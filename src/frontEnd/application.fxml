@@ -14,9 +14,7 @@
         <URL value="@application.css" />
     </stylesheets>
    <children>
-      <JFXButton layoutX="539.0" layoutY="169.0" prefHeight="219.0" prefWidth="495.0" />
-      <JFXClippedPane layoutX="595.0" layoutY="415.0" />
-      <JFXButton fx:id="b1" layoutX="728.0" layoutY="481.0" onAction="#moveButton" text="sdfdsf" />
-      <JFXHamburger layoutX="442.0" layoutY="245.0" />
+      <JFXListView fx:id="workspaces" layoutX="5.0" prefHeight="812.0" prefWidth="1133.0" style="-fx-background-color: #D7C7C7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="1139.0" onAction="#create" prefHeight="84.0" prefWidth="166.0" style="-fx-border-color: #60037f;" text="Add workspace" />
    </children>
 </AnchorPane>
