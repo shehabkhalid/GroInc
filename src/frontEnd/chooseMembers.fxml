@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="472.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.ChooseMembersController">
+   <children>
+      <JFXListView fx:id="checkingList" layoutX="80.0" layoutY="-110.0" prefHeight="413.0" prefWidth="410.0" style="-fx-background-color: faf0e6; -fx-border-color: #60037f;" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+      <JFXButton layoutX="170.0" layoutY="425.0" onAction="#Save" prefHeight="33.0" prefWidth="70.0" style="-fx-border-color: #636161;" text="Save" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" />
+   </children>
+</AnchorPane>

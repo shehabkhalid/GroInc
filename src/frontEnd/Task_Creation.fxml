@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="451.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.Task_CreationController">
+   <children>
+      <JFXTextField fx:id="task_title" alignment="CENTER" focusColor="#112233" layoutX="195.0" layoutY="42.0" promptText="Task title" unFocusColor="#636161" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="42.0" />
+      <JFXTextArea fx:id="description" focusColor="#112233" layoutX="6.0" layoutY="82.0" prefHeight="170.0" prefWidth="544.0" promptText=" Description" unFocusColor="#636161" wrapText="true" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="113.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton layoutX="209.0" layoutY="301.0" onAction="#Choose" style="-fx-border-color: #636161;" text="Choose members" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="206.0" />
+      <JFXButton layoutX="211.0" layoutY="355.0" onAction="#Create" prefHeight="33.0" prefWidth="138.0" style="-fx-border-color: #636161;" text="Create" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="206.0" />
+   </children>
+</AnchorPane>

@@ -20,45 +20,49 @@ import javafx.stage.Stage;
  *
  * @author shehab
  */
-public class SceneMaker 
-  {
+public class SceneMaker {
 
-    private  static Stage mainStage;
-    
-    private  static boolean firstTime = true;
-    private static  JFXDecorator border;   
-    public static void setMainStage(Stage mainStage)
-      {
+    private static Stage mainStage;
+
+    private static boolean firstTime = true;
+    private static JFXDecorator border;
+
+    public static void setMainStage(Stage mainStage) {
         SceneMaker.mainStage = mainStage;
-      }
+    }
 
-    public static void startScene(URL formPath) throws Exception
-      {
-           AnchorPane root = FXMLLoader.load(formPath);
+    public static void startScene(URL formPath) throws Exception {
+        AnchorPane root = FXMLLoader.load(formPath);
         Scene theNewScene;
-        if(firstTime)
-          {
+        if (firstTime) {
             border = new JFXDecorator(mainStage, root);
-            firstTime=false;
-          }
-       else
-          {
-               border.setContent(root);
-          }
-  
-      
+            firstTime = false;
+        } else {
+            border.setContent(root);
+        }
+
+        mainStage.setWidth(root.getPrefWidth());
+         mainStage.setHeight(root.getHeight());
         mainStage.setMinWidth(root.getPrefWidth());
         mainStage.setMinHeight(root.getPrefHeight());
-          try
-            {
-                theNewScene = new Scene(border);
-               
-                theNewScene.getStylesheets().add("/frontEnd/decoratorEdit.css");
-                mainStage.setScene(theNewScene);
-                mainStage.show();
-        
-            } catch (Exception e)
-              {}
-      }
+      
+        try {
+            theNewScene = new Scene(border);
 
-  }
+            theNewScene.getStylesheets().add("/frontEnd/decoratorEdit.css");
+            mainStage.setScene(theNewScene);
+            //mainStage.centerOnScreen();
+
+            mainStage.show();
+            double g = (1920 - mainStage.getWidth()) / 2;
+         
+            mainStage.setX(g);
+
+        } catch (Exception e) {
+            double g = (1920 - mainStage.getWidth()) / 2;
+            mainStage.setX(g);
+
+        }
+    }
+
+}

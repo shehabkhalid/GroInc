@@ -35,7 +35,12 @@ public class GroInc extends Application
 
 
         SceneMaker.setMainStage(stage);
-        SceneMaker.startScene(getClass().getResource("/frontEnd/LoginForm.fxml"));
+          try {
+                      SceneMaker.startScene(getClass().getResource("/frontEnd/Workspace2.fxml"));
+
+          } catch (Exception e) {
+              System.out.println(e);
+          }
 
       }
 

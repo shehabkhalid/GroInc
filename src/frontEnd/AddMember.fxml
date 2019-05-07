@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="189.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.AddMemberController">
+   <children>
+      <JFXTextField fx:id="memberUsername" alignment="CENTER" focusColor="#112233" labelFloat="true" layoutX="134.0" layoutY="39.0" promptText="Member username" unFocusColor="#636161" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="133.0" />
+      <JFXButton layoutX="193.0" layoutY="132.0" onAction="#Add" style="-fx-border-color: #636161;;" text="Add" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="193.0" />
+   </children>
+</AnchorPane>
