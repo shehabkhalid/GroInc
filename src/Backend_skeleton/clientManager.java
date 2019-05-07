@@ -15,6 +15,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import attributes.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -46,6 +47,10 @@ public class clientManager
     
     
    
+    private static Object getData() throws ClassNotFoundException,Exception
+      {
+        return input.readObject();
+      }
     
     private static boolean opreationConfirmed(Object object) throws IOException,ClassNotFoundException
       {
@@ -93,5 +98,21 @@ public class clientManager
         tempMail.setMailString(Mail);
         return opreationConfirmed(tempMail);
       }
+    
+    public  static boolean addTask(String workSpaceName , String taskName , String Taskdescription, date deadLine) throws ClassNotFoundException,IOException
+      {
+        task temp = new task();
+        temp.setTitle(taskName);
+        temp.setDeadLine(deadLine);
+        temp.setWorkSpaceName(workSpaceName);
+        temp.inProgress();
+        return opreationConfirmed(temp);
+              
+      }
+   public static ArrayList<String> getWorkSpaceTasks(String workSpaceName)  
+     {
+       
+     }
+    
 
   }

@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 import frontEnd.*;
 import Backend_skeleton.dataBaseConnector;
 import Backend_skeleton.SceneMaker;
-import com.jfoenix.controls.JFXDecorator;
+
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.StageStyle;
@@ -33,8 +33,7 @@ public class GroInc extends Application
     public void start(Stage stage) throws Exception
       {
 
-//Scene scene = new Scene(decorator, 800, 850);
-   //    dataBaseConnector.openDataBase();
+
         SceneMaker.setMainStage(stage);
         SceneMaker.startScene(getClass().getResource("/frontEnd/LoginForm.fxml"));
 
@@ -45,7 +44,7 @@ public class GroInc extends Application
      */
     public static void main(String[] args) throws Exception
       {
-      
+       
         
          
           
@@ -59,3 +58,6 @@ public class GroInc extends Application
       }
 
   }
+
+
+

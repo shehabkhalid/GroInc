@@ -26,6 +26,13 @@ public abstract class person implements Serializable
     protected phoneNumber phoneNumber1;
     protected String command;
 
+    public void setPassword(String password)
+      {
+        this.password = password;
+      }
+
+    
+    
     public String getBirthDate()
       {
         return birthDate;

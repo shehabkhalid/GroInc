@@ -38,9 +38,9 @@ public class clientTest
             
             email m = new email();
             m.setMailString("dasad@dasd");
-            person temp = new member(new name("mohamed", "khaled"), new phoneNumber("01122887577"), m, "MALE", "1999-05-28", "123456789", "mohadkhald");
-            temp.setCommand("ADD");
-            output.writeObject(temp);
+       //     person temp = new member(new name("mohamed", "khaled"), new phoneNumber("01122887577"), m, "MALE", "1999-05-28", "123456789", "mohadkhald");
+           // temp.setCommand("ADD");
+            //output.writeObject(temp);
             
             System.out.println((String) input.readObject());
 
