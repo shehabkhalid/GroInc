@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="713.0" prefWidth="565.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.Workspace2Controller">
+    <stylesheets>
+        <URL value="@workspace2.css" />
+    </stylesheets>
+   <children>
+      <JFXListView fx:id="workspacetasks" layoutX="2.0" layoutY="6.0" prefHeight="707.0" prefWidth="558.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="myPane" layoutX="241.0" prefHeight="400.0" prefWidth="130.0" style="-fx-background-color: #60037f;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutY="29.0" onAction="#ShowMember" prefHeight="62.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-border-color: #60037f;" text="Members" textAlignment="CENTER" />
+            <JFXButton fx:id="Home" alignment="CENTER" contentDisplay="CENTER" layoutY="90.0" onAction="#home" prefHeight="62.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-border-color: #60037f;" text="Home" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutY="151.0" onAction="#CreateTask" prefHeight="62.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-border-color: #60037f;" text="Create task" textAlignment="CENTER" />
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutY="212.0" onAction="#AddMember" prefHeight="62.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-border-color: #60037f;" text="Add member" textAlignment="CENTER" />
+         </children>
+         <effect>
+            <Glow />
+         </effect></Pane>
+      <JFXHamburger fx:id="hamburger" layoutX="327.0" layoutY="4.0" onMousePressed="#sidePane" AnchorPane.rightAnchor="14.0" />
+   </children>
+</AnchorPane>

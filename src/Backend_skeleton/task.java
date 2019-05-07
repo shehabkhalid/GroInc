@@ -8,39 +8,66 @@ import attributes.date;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
 /**
  *
  * @author shehab
  */
-public class task
+public class task implements Serializable 
   {
+    
+    private static final long serialVersionUID = 121L;
+    
+    
+    private String workSpaceName = new String("");
     private String title = new String("");
     private date deadLine;
     private String description = new String("");
-    private ArrayList<member> mArrayList = new ArrayList<member>();
-    boolean done,inProgress,toDo;
+   
+    boolean done,inProgress,passed;
+
+    public void setDeadLine(date deadLine)
+      {
+        this.deadLine = deadLine;
+      }
+
+    public void setDescription(String description)
+      {
+        this.description = description;
+      }
+
+ 
+    public void done()
+      {
+        done = true;
+        inProgress =  !done;
+        passed = !done;
+      }
     
-    public void editTitle(String newTitle)
+    public void inProgress()
       {
-        title = newTitle;
+        inProgress = true;
+        done =  !inProgress;
+        passed = !inProgress;
       }
-    public void editDescription(String newDiscription)
+    
+     public void passed()
       {
-        description = newDiscription;
+        passed = true;
+        done =  !passed;
+        inProgress = !passed;
       }
-    public void editDeadLine(date newDate)
+
+    public void setTitle(String title)
       {
-        deadLine = newDate;
+        this.title = title;
       }
-    public  void editOrAddMembers(int choose, member newMember)
+    
+    public void setWorkSpaceName(String workSpaceName)
       {
-        if(choose == 1)
-          {
-            mArrayList.add(newMember);
-          }
-        else
-            mArrayList.remove(newMember);
+        this.workSpaceName = workSpaceName;
       }
+    
     
   }

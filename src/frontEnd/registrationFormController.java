@@ -115,8 +115,17 @@ public class registrationFormController implements Initializable
                                 if (Password.isValid(password.getText()))
                                   {
 
-                                    tempPerson = new member(tempName, tempPhone,
-                                            tempMail, gender_combobox.getValue(), datePick.getValue().toString(), Password.Encrypt(new StringBuilder(password.getText())), userName.getText());
+                                    tempPerson = new member.Builder(tempName)
+                                            .setBuilderphone(tempPhone)
+                                            .setBuilderbirthdate(datePick.getValue().toString())
+                                            .setBuildermail(tempMail)
+                                            .setBuildergender(gender_combobox.getValue())
+                                            .setBuilderpassword(password.getText())
+                                            .setBuilderusername(userName.getText())
+                                            .build();
+
+                                    // tempPerson = new member(tempName, tempPhone,
+                                    //       tempMail, gender_combobox.getValue(), datePick.getValue().toString(), Password.Encrypt(new StringBuilder(password.getText())), userName.getText());
                                     tempPerson.setCommand("ADD");
                                     //System.out.println(tempPerson.getPhoneNumber1().getpString());
                                     if (clientManager.addUser(tempPerson))

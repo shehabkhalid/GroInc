@@ -5,6 +5,7 @@
  */
 package frontEnd;
 
+import Backend_skeleton.SceneMaker;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -36,8 +37,10 @@ public class NewWorkspaceController implements Initializable {
     }    
 
     @FXML
-    private void checkWorkspace(ActionEvent event) {
-        
+    private void checkWorkspace(ActionEvent event) throws Exception {
+        Stage x = (Stage)closeSmallWindow.getScene().getWindow();
+        x.close();
+        SceneMaker.startScene(getClass().getResource("Workspace.fxml"));
     }
 
     @FXML
