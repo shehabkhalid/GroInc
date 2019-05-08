@@ -1,7 +1,5 @@
-/*
- * Empty Stylesheet file.
- */
 
-.mainFxmlClass {
-
+.button:hover{
+    -fx-background-color: #60037f;
+    -fx-text-fill: #ffffff;    
 }

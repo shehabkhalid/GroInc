@@ -10,8 +10,8 @@
 
 <AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="451.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.Task_CreationController">
    <children>
-      <JFXTextField fx:id="task_title" alignment="CENTER" focusColor="#112233" layoutX="195.0" layoutY="42.0" promptText="Task title" unFocusColor="#636161" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="42.0" />
-      <JFXTextArea fx:id="description" focusColor="#112233" layoutX="6.0" layoutY="82.0" prefHeight="170.0" prefWidth="544.0" promptText=" Description" unFocusColor="#636161" wrapText="true" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="113.0">
+      <JFXTextField fx:id="task_title" alignment="CENTER" focusColor="#112233" labelFloat="true" layoutX="195.0" layoutY="42.0" promptText="Task title" unFocusColor="#636161" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="42.0" />
+      <JFXTextArea fx:id="description" focusColor="#112233" labelFloat="true" layoutX="6.0" layoutY="82.0" prefHeight="170.0" prefWidth="544.0" promptText=" Description" unFocusColor="#636161" wrapText="true" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="113.0">
          <font>
             <Font name="Arial" size="15.0" />
          </font>

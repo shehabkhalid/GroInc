@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Backend_skeleton;
 
+
+import Backend_skeleton.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -60,7 +61,7 @@ public class clientManager
         myData = (ArrayList<Object>) input.readObject();
         String ans = (String) input.readObject();
         return (ans.equals("true"));
-
+        
       }
 
     private static boolean opreationConfirmed(Object object) throws IOException, ClassNotFoundException
@@ -119,33 +120,26 @@ public class clientManager
 
       }
 
-    public static ArrayList<String> getWorkSpaceTasks(String workSpaceName) throws IOException, ClassNotFoundException
+    public static boolean getWorkSpaceTasks(String workSpaceName) throws IOException, ClassNotFoundException
       {
         request myRequest = new request();
         myRequest.setCommand("getWorkSpaceTasks");
         myRequest.setWorkSpaceName(workSpaceName);
-        opreationWithData(myRequest);
+        return opreationWithData(myRequest);
 
-        ArrayList<String> toSend = new ArrayList<>();
-        for (Object x : myData)
-          {
-            toSend.add((String) x);
-          }
+      }
 
-        return toSend;
-
+    public static ArrayList<Object> getMyData()
+      {
+        return myData;
       }
     
-    public static  ArrayList<String> getWorkSpaceNames(String userName) throws IOException, ClassNotFoundException
-      {
-         request myRequest = new request();
-         myRequest.setCommand("getUserWorkSpaces");
-         myRequest.setUserName(userName);
-          opreationWithData(myRequest);
-          ArrayList<String> toSend = new ArrayList<String>();
-          for(Object x : myData)
-              toSend.add((String) x);
-          return toSend;
-      }
 
+    public static void main(String[] args) throws IOException, ClassNotFoundException
+      {
+        openConnection();
+          getWorkSpaceTasks("shehab_Test_final");
+          System.out.println((String)myData.get(0));
+        
+      }
   }

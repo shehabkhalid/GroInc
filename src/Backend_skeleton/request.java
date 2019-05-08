@@ -12,8 +12,36 @@ import java.io.Serializable;
  */
 public class request implements Serializable
   {
+    
+     private static final long serialVersionUID = 122L;
     private String command;
+    private String WorkSpaceName;
+    private String userName;
+    
 
+    public void setUserName(String userName)
+      {
+        this.userName = userName;
+      }
+
+    public String getUserName()
+      {
+        return userName;
+      }
+    
+
+    public void setWorkSpaceName(String WorkSpaceName)
+      {
+        this.WorkSpaceName = WorkSpaceName;
+      }
+
+    
+    public String getWorkSpaceName()
+      {
+        return WorkSpaceName;
+      }
+
+    
     public String getCommand()
       {
         return command;
@@ -23,5 +51,6 @@ public class request implements Serializable
       {
         this.command = command;
       }
+    
     
   }

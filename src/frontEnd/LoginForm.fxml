@@ -14,8 +14,8 @@
 
 <AnchorPane id="AnchorPane" fx:id="loginPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="368.0" style="-fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontEnd.LoginFormController">
    <children>
-      <JFXTextField fx:id="userName" focusColor="#112233" layoutX="76.0" layoutY="64.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Username" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
-      <JFXPasswordField fx:id="password" focusColor="#112233" layoutX="76.0" layoutY="168.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Password" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
+      <JFXTextField fx:id="userName" focusColor="#112233" labelFloat="true" layoutX="76.0" layoutY="64.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Username" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
+      <JFXPasswordField fx:id="password" focusColor="#112233" labelFloat="true" layoutX="76.0" layoutY="168.0" prefColumnCount="15" prefHeight="47.0" prefWidth="211.0" promptText="Password" unFocusColor="#636161" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="81.0" />
       <JFXButton layoutX="107.0" layoutY="312.0" onAction="#LoginButton" prefHeight="33.0" prefWidth="154.0" ripplerFill="#636161" style="-fx-border-color: #636161; -fx-border-width: 1;" text="Login" textFill="#636161" textOverrun="LEADING_ELLIPSIS" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0">
          <effect>
             <ColorAdjust />

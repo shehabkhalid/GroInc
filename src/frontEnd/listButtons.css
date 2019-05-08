@@ -27,7 +27,12 @@
   
 }
 jfx.list-view{
-   -fx-cell-vertical-margin: 20.0;
+   .jfx-list-view{
+   -fx-background-insets: 0;
+   -fx-cell-vertical-margin:10.0;
+   -fx-vertical-gap:50;
+    
+}
    
     
 }

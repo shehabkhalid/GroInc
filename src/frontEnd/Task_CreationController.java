@@ -43,7 +43,7 @@ public class Task_CreationController implements Initializable {
     @FXML
     private void Choose(ActionEvent event) throws Exception {
         try {
-            SceneMaker.startScene(getClass().getResource("/frontEnd/chooseMembers.fxml"));
+            SceneMaker.startPopupScene(getClass().getResource("/frontEnd/chooseMembers.fxml"));
         } catch (Exception e) {
             System.err.println(e);
         }

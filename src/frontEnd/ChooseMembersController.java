@@ -5,6 +5,7 @@
  */
 package frontEnd;
 
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +20,7 @@ import javafx.util.Duration;
 public class ChooseMembersController implements Initializable {
 
     @FXML
-    private JFXListView<CheckBox> checkingList;
+    private JFXListView<JFXCheckBox> checkingList;
     @FXML
     private AnchorPane myPane;
 
@@ -29,7 +30,7 @@ public class ChooseMembersController implements Initializable {
         for (Integer j = 0; j < 5; j++) {
             String tmp = "Member ";
             tmp += j.toString();
-            CheckBox check = new CheckBox(tmp);
+            JFXCheckBox check = new JFXCheckBox(tmp);
             checkingList.getItems().add(check);
         }
     }

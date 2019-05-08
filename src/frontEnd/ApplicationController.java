@@ -52,7 +52,7 @@ public class ApplicationController implements Initializable {
             workspaces.getItems().add(s.get(i));
             
         }*/
-        for (Integer i = 0; i < 4; ++i) {
+        for (Integer i = 0; i < 5; ++i) {
             workspaces.getItems().add(i.toString());
         }
         workspaces.getStylesheets().add("/frontEnd/listButtons.css");

@@ -30,7 +30,16 @@ public class SceneMaker {
     public static void setMainStage(Stage mainStage) {
         SceneMaker.mainStage = mainStage;
     }
-
+    public static void startPopupScene(URL Path) throws IOException {
+       FXMLLoader loader = new FXMLLoader(Path);
+       Parent root1 = (Parent)loader.load();
+       Stage stage = new Stage();
+       border = new JFXDecorator(stage, root1);
+       Scene tScene = new Scene(border);
+       tScene.getStylesheets().add("/frontEnd/decoratorEdit.css");
+       stage.setScene(tScene);
+       stage.show();
+    }
     public static void startScene(URL formPath) throws Exception {
         AnchorPane root = FXMLLoader.load(formPath);
         Scene theNewScene;
